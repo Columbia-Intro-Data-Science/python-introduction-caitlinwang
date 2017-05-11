@@ -1,0 +1,75 @@
+# Only Python 3.5 support tensorflow
+pip install tensorflow
+
+# Process images
+pip install matplotlib
+
+# Process .jpg images need PIL support
+# Pillow is a PIL version in python 3.x
+pip install pillow
+
+# Dependencies
+sudo apt-get install libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.5-dev tk8.5-dev python-tk
+
+# Install openCV for python 3.5
+# Download from http://www.lfd.uci.edu/~gohlke/pythonlibs/
+pip install python-3.2.0-cp35-cp35m-win_amd64.whl
+
+# Install scipy
+pip install scipy-0.19.0-cp35-cp35m-win_amd64.whl
+
+# Issues in linux
+sudo apt-get install liblapack-dev
+sudo apt-get install gfortran
+
+# Install sklearn
+pip install sklearn
+
+# Install numpy + mkl
+pip install numpy-1.12.1+mkl-cp35-cp35m-win_amd64.whl
+
+# Install Flask framework(u can use virtualenv to manage env)
+pip install flask
+
+################################################################
+# How to run server & request
+################################################################
+
+1. python homework_v2.py
+2. python GRP.py
+3. request "localhost:5000" in your Chrome(or Safari)
+
+################################################################
+# Authority
+################################################################
+
+sudo chmod -R 777 dir_name
+
+################################################################
+# Server env in Cloud
+################################################################
+
+sudo apt-get update
+sudo apt-get install python3-setuptools python3-dev
+
+sudo apt-get install git
+git clone https://github.com/10081677wc/Gesture-Recognition.git
+
+sudo apt-get install build-essential -y  
+sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev -y
+
+sudo pip3 install numpy
+
+wget https://github.com/opencv/opencv/archive/3.2.0.zip
+sudo apt-get install zip
+unzip 3.0.0.zip && cd opencv-3.0.0  
+mkdir build && cd build  
+
+cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local PYTHON3_EXECUTABLE=/usr/bin/python3 PYTHON_INCLUDE_DIR=/usr/include/python3.5 PYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.5m.so PYTHON3_NUMPY_INCLUDE_DIRS=/usr/local/lib/python3.5/dist-packages/numpy/core/include ..  
+make -j4 
+sudo make install
+
+sudo pip install opencv-python
+
+# When use supervisorctl, remember reload after editing conf
+sudo apt-get install supervisor
